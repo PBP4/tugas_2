@@ -26,6 +26,16 @@ public class MusicPlayer extends AppCompatActivity implements View.OnClickListen
 
         start.setOnClickListener(this);
         stop.setOnClickListener(this);
+
+        Button back = (Button) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = null;
+                i = new Intent(MusicPlayer.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
