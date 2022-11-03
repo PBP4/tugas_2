@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Service Demo</string>
+    <string name="app_name">tutorial_service2</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="title">Title</string>
+    <string-array name="songlist">
+        <item>unisono1stanza</item>
+        <item>pianopaduansuara1stanza</item>
+        <item>simphoni1stanza</item>
+    </string-array>
 </resources>

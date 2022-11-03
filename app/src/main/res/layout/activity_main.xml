@@ -6,25 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PLAY"
-        android:onClick="playButtonHandler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/buttonStop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="STOP"
-        android:onClick="stopButtonHandler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonPlay"
-        app:layout_constraintStart_toStartOf="parent"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>
