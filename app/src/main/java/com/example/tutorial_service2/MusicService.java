@@ -1,0 +1,53 @@
+package com.example.tutorial_service2;
+
+import android.app.Service;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.IBinder;
+
+import androidx.annotation.Nullable;
+
+public class MusicService extends Service {
+    MediaPlayer player;
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        String rcvsong = intent.getStringExtra("song");
+
+        int playedsong = getResources().getIdentifier(rcvsong,"raw",getPackageName());
+
+
+        if(player == null) {
+            if(rcvsong.equals("unisono1stanza")){
+                player = MediaPlayer.create(getApplicationContext(),R.raw.unisono1stanza);
+            }
+            else if(rcvsong.equals("pianopaduansuara1stanza")){
+                player = MediaPlayer.create(getApplicationContext(),R.raw.pianopaduansuara1stanza);
+            }
+            else if(rcvsong.equals("simphoni1stanza")){
+                player = MediaPlayer.create(getApplicationContext(),R.raw.simphoni1stanza);
+            }
+        }
+        player.start();
+        return START_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        stopPlayer();
+    }
+
+    private void stopPlayer(){
+        if(player != null){
+            player.release();
+            player = null;
+        }
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+}
