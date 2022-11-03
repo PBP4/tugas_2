@@ -15,19 +15,10 @@ public class MusicService extends Service {
         String rcvsong = intent.getStringExtra("song");
 
         int playedsong = getResources().getIdentifier(rcvsong,"raw",getPackageName());
-
-
         if(player == null) {
-            if(rcvsong.equals("unisono1stanza")){
-                player = MediaPlayer.create(getApplicationContext(),R.raw.unisono1stanza);
-            }
-            else if(rcvsong.equals("pianopaduansuara1stanza")){
-                player = MediaPlayer.create(getApplicationContext(),R.raw.pianopaduansuara1stanza);
-            }
-            else if(rcvsong.equals("simphoni1stanza")){
-                player = MediaPlayer.create(getApplicationContext(),R.raw.simphoni1stanza);
-            }
+            player = MediaPlayer.create(getApplicationContext(), playedsong);
         }
+
         player.start();
         return START_STICKY;
     }
