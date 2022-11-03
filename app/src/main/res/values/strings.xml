@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">tutorial_service2</string>
+    <string name="app_name">Music Player</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="title">Title</string>
