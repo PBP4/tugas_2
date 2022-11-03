@@ -29,8 +29,21 @@
         <ImageView
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:src="@drawable/merahputih"
-            />
+            android:src="@drawable/merahputih"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/txtCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="20dp"/>
 
         <Button
             android:id="@+id/buttonStart"

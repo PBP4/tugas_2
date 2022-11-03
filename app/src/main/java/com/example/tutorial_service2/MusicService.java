@@ -8,7 +8,7 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 
 public class MusicService extends Service {
-    MediaPlayer player;
+    static MediaPlayer player;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
