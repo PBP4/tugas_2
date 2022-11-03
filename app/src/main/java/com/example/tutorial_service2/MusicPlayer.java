@@ -81,6 +81,10 @@ public class MusicPlayer extends AppCompatActivity implements View.OnClickListen
                         int mCurrentPosition = MusicService.player.getCurrentPosition() / 1000;
                         seekBar.setProgress(mCurrentPosition);
                         txtCurrentTime.setText(String.format("%02d:%02d", mCurrentPosition / 60, mCurrentPosition % 60));
+                        if (!(MusicService.player.isPlaying())) {
+                            start.setEnabled(true);
+                            stop.setEnabled(false);
+                        }
                     }
                     mHandler.postDelayed(this, 1000);
                 }
