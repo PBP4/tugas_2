@@ -15,8 +15,10 @@ public class MusicService extends Service {
         String rcvsong = intent.getStringExtra("song");
 
         int playedsong = getResources().getIdentifier(rcvsong,"raw",getPackageName());
-
         stopPlayer();
+        if(player == null){
+            player = MediaPlayer.create(getApplicationContext(),playedsong);
+        }
 
         player.start();
         return START_STICKY;
